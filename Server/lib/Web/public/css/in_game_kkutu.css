@@ -56,7 +56,7 @@ equ{
 }
 #Top{
 	background-color: #7CC4F8;
-	background-image: none;
+            background-image: url('/img/kkutu/topbi.png');
 }
 #Top .menu-btn{
 	color: #111111;
@@ -224,7 +224,6 @@ iframe{
 	.UserListBox div{ float: left; }
 	.UserListBox .product-body{ width: 190px; height: 330px; overflow-x: hidden; overflow-y: scroll; }
 	.users-item{ width: 190px; }
-		.users-image{ margin: 1px; width: 18px; height: 18px; }
 		.users-level{ margin: 1px; width: 18px; height: 18px; }
 		.users-name{ padding: 2px 0px 0px 3px; width: 147px; font-size: 13px; }
 		.users-item:hover{ cursor: pointer; background-color: #F4F4F4; }
@@ -323,6 +322,17 @@ iframe{
 		height: 151px;
 		box-shadow: 0px 1px 1px #777777;
 		background-color: #E4E4E4;
+	}
+	.x-room_user{
+		float: left;
+		padding: 3px;
+		border-radius: 10px;
+		margin: 3px;
+		width: 224px;
+		height: 151px;
+		box-shadow: 0px 1px 1px #777777;
+		background-color: #E4E4E4;
+                        background-image: url('/img/kkutu/shop/room_user.gif');
 	}
 		.room-user div{ float: left; }
 		.room-user-image{ margin: 3px; width: 100px; height: 100px; }
@@ -434,18 +444,7 @@ iframe{
 			background-color: #DEAF56;
 		}
 		.cw .jjoDisplayBar{ width: 308px; height: 330px; transition: all 0.5s ease; }
-			.jjo-display{
-				padding: 8px 5px;
-				border-radius: 10px;
-				border-bottom-left-radius: 0px;
-				border-bottom-right-radius: 0px;
-				width: 476px;
-				height: 23px;
-				font-size: 20px;
-				text-align: center;
-				color: #EEEEEE;
-				background-color: rgba(0, 0, 0, 0.7);
-			}
+			
 			.jjo-display-word-length{ color: orange; font-size: 14px; }
 			.cw .jjo-display{ position: relative; padding: 5px; width: 298px; height: 298px; }
 				.display-text{ width: 20px; text-align: center; z-index: 1; }
@@ -507,11 +506,13 @@ iframe{
 	.rounds{
 		margin-top: -130px;
 		width: 990px;
+		margin: auto;
 		color: #FFFFFF;
 		text-align: center;
 		text-shadow: 0px 1px 1px #141414;
 	}
 	.cw.rounds{ margin-top: -380px; }
+	.painter.rounds{ margin-left: -1.5em !important;}
 		.rounds label{ margin: 0px 3px; }
 		.cw.rounds label{ cursor: pointer; }
 		.rounds-current{ color: #FFFF3B; font-size: 16px; }
@@ -876,6 +877,7 @@ iframe{
 .ADBox .product-body{
 	padding-left: 131px;
 }
+
 
 @keyframes RoundEffect{
 	0%		{ font-size: 16px; color: #FFFF44; background-color: rgba(0, 0, 0, 1); }

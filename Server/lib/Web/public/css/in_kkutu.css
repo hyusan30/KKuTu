@@ -55,12 +55,12 @@ equ{
 	z-index: 5;
 }
 #Top{
-	background-color: #7CC4F8;
-	background-image: none;
+	background-color: #04B486;
+            background-image: url('/img/kkutu/topbi.png');
 }
 #Top .menu-btn{
 	color: #111111;
-	background-color: #7CC4F8;
+	background-color: #D8D8D8;
 	background-image: none;
 }
 #Top .menu-sub-btn{ color: #222222; }
@@ -109,10 +109,13 @@ iframe{
 .kkutu-menu button{
 	float: left;
 	border: none;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	width: 98px;
-	height: 20px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	width: 143px;
+	height: 15px;
+            color: #022b57;
 }
 	.kkutu-menu button:hover{
 		margin-top: -5px;
@@ -130,7 +133,7 @@ iframe{
 	display: none;
 	position: fixed;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 3px;
 	color: #111111;
 	box-shadow: 0px 1px 1px #141414;
 	background-color: #EEEEEE;
@@ -143,26 +146,26 @@ iframe{
 	.dialog-bar label{ font-size: 13px; }
 	.dialog-bar button{ float: left; }
 		.dialog-opt{ float: left; width: 100px; }
-	.tail-button{ margin-top: 7px; }
+	.tail-button{ margin-top: 80px; }
 	.tail-button button{ float: right; margin-right: 5px; width: 80px; height: 20px; }
 	.dialog .closeBtn{
 		float: right;
-		border-radius: 6px;
+		border-radius: 3px;
 		margin-top: 1px;
 		width: 12px;
 		height: 12px;
-		background-color: #EE5555;
+		background-color: #eeeeee;
 	}
-	.dialog .closeBtn:hover{ background-color: #EE7777; }
+	.dialog .closeBtn:hover{ background-color: #eeeeee; }
 	.dialog-head{
 		padding: 3px;
 		border-bottom: 1px solid #CCCCCC;
-		border-radius: 5px;
-		margin-bottom: 5px;
+		border-radius: 3px;
+		margin-bottom: 3px;
 		height: 12px;
-		color: #222222;
+		color: #eeeeee;
 		font-size: 11px;
-		background-color: #DDDDDD;
+		background-color: #022b57;
 	}
 		.dialog-head .dialog-title{ float: left; cursor: move; }
 #replay-players{ height: 140px; overflow-y: scroll; }
@@ -184,18 +187,18 @@ iframe{
 	position: absolute;
 }
 .Product{
-	border-radius: 0px;
+	border-radius: 3px;
 	color: #111111;
 	box-shadow: 0px 2px 1px #DDDDDD;
 	background-color: #EEEEEE;
 }
 .product-title{
-	border-bottom-color: #CCCCCC;
-	border-radius: 5px;
-	color: #222222;
-	background-color: #DDDDDD;
+	border-bottom-color: #FFFFFF;
+	border-radius: 3px;
+	color: #FFFFFF;
+	background-color: #022b57;
 }
-.product-title i{ color: #111111; }
+.product-title i{ color: #ffffff; }
 .dialog-front{ z-index: 3; }
 #comm-friends div{ float: left; }
 	.cf-item{ margin: 2px 0px; width: 100%; }
@@ -231,11 +234,11 @@ iframe{
 .UserListBox{
 	width: 200px;
 	height: 360px;
+            border-top-left-radius: 3px;
 }
 	.UserListBox div{ float: left; }
 	.UserListBox .product-body{ width: 190px; height: 330px; overflow-x: hidden; overflow-y: scroll; }
 	.users-item{ width: 190px; }
-		.users-image{ margin: 1px; width: 18px; height: 18px; }
 		.users-level{ margin: 1px; width: 18px; height: 18px; }
 		.users-name{ padding: 2px 0px 0px 3px; width: 147px; font-size: 13px; }
 		.users-item:hover{ cursor: pointer; background-color: #F4F4F4; }
@@ -244,13 +247,15 @@ iframe{
 .RoomListBox{
 	width: 790px;
 	height: 360px;
+            border-top-right-radius: 3px;
+            background-image: url('/img/kkutu/kproomlist.png');
 }
 	.RoomListBox div{ float: left; }
 	.RoomListBox .product-body{ width: 780px; height: 330px; overflow-x: hidden; overflow-y: scroll; }
 	.rooms-item{
 		padding: 5px;
-		border-radius: 10px;
-		margin: 3px;
+		border-radius: 3px;
+		margin: 2px;
 		width: 364px;
 		height: 64px;
 		box-shadow: 0px 1px 1px #777777;
@@ -258,8 +263,13 @@ iframe{
 		background-color: #E4E4E4;
 		transition: all 300ms ease;
 	}
-		.rooms-create{ background-color: #8EC0F3; }
-		.rooms-create>div{ float: none; padding: 20px 0px; text-align: center; font-size: 15px; font-weight: bold; }
+	            .rooms-item{ background: url('/img/kkutu/room/room_wait.png');}
+	            .rooms-item{ background-color: #E4E4E4; color: #e6e6e6; }
+	            .rooms-gaming{ background: url('/img/kkutu/room/room_play.png'); }
+	            .rooms-gaming{ background-color: #FFBBBB; }
+		.rooms-create>div{ float: none; padding: 20px 0px; text-align: center; font-size: 15px; font-weight: bold; margin: 0px; }
+	.rooms-create{ background: url('/img/kkutu/room/room_make.png');}
+	.rooms-create{ background-color: #8EC0F3; }
 		.rooms-channel{ position: relative; width: 10px; height: 10px; border-radius: 5px; margin-right: -10px; }
 			.rooms-channel:hover{ width: 8px; height: 8px; border: 1px solid #000; }
 			.channel-1{ background-color: #F99; }
@@ -269,7 +279,7 @@ iframe{
 		.rooms-gaming{ background-color: #FFBBBB; }
 			.rooms-gaming .rooms-number{ border-color: #CC9999; }
 		.rooms-item:hover{ background-color: #F4F4F4; }
-			.rooms-gaming:hover{ background-color: #FFCCCC; }
+		            .rooms-gaming:hover{ background-color: #FFCCCC; }
 			.rooms-create:hover{ background-color: #AADDFF; }
 		.rooms-number{ padding-top: 18px; border-right: 1px solid #CCCCCC; margin-right: 4px; width: 49px; height: 46px; font-size: 24px; }
 		.rooms-title{ padding-top: 4px; width: 270px; height: 20px; font-size: 16px; font-weight: bold; }
@@ -288,6 +298,7 @@ iframe{
 .RoomBox{
 	width: 1000px;
 	height: 360px;
+            background-image: url('/img/kkutu/kproomlistin.png');
 }
 	.RoomBox .product-title{ height: 12px; }
 	.RoomBox .product-title h5{ float: left; }
@@ -298,7 +309,7 @@ iframe{
 		.room-head-limit{ width: 70px; text-align: center; }
 		.room-head-round{ width: 70px; text-align: center; }
 		.room-head-time{ width: 54px; text-align: center; }
-	.team-selector{
+		.team-selector{
 		float: left;
 		padding-right: 3px;
 		border-right: 1px solid #CCCCCC;
@@ -325,6 +336,19 @@ iframe{
 		.team-2{ background-color: #FFBF30; }
 		.team-3{ background-color: #88C525; }
 		.team-4{ background-color: #4A90D6; }
+	}
+	.x-room_user{
+                        position: relative;
+		float: left;
+		padding: 3px;
+		border-radius: 10px;
+		margin: 3px;
+		width: 224px;
+		height: 151px;
+		box-shadow: 0px 1px 1px #777777;
+		background-color: #E4E4E4;
+                        background-image: url('/img/kkutu/shop/room_user.gif');
+	}
 	.room-user{
 		float: left;
 		padding: 3px;
@@ -371,6 +395,86 @@ iframe{
 		width: 225px;
 		height: 110px;
 	}
+	.tools{
+		margin: 00px 10px 0px 10px;
+		width: 225px;
+		display: none;
+		background-color: #eeeeee;
+		border: 1px solid #000;
+		border-radius: 10px;
+		padding: 20px;
+		box-shadow: 0px 1px 1px #141414;
+	}
+	#drawing {
+		font-size: 14px;
+		margin-bottom: 10px;
+		display: block;
+	}
+	#drawing-title {
+		font-size: 14px;
+		margin-bottom: 10px;
+		display: block;
+		overflow-x: scroll;
+		height: 34px;
+		white-space: nowrap;
+	}
+	#themeis {
+		font-size: 14px;
+		margin-bottom: 10px;
+		display: block;
+	}
+	#themeis-title {
+		font-size: 14px;
+		margin-bottom: 10px;
+		display: block;
+	}
+	.button-color {
+		border: none;
+		width: 50px;
+		height: 30px;
+	}
+	.palette {
+		background-color: #DEB887;
+		border: 1px solid #000;
+		border-radius: 10px;
+		box-shadow: 0px 1px 1px #141414;
+		padding: 5px 5px 5px 5px;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.palette div {
+		float: left;
+		width: 60px;
+		margin: 5px 5px 5px 5px;
+	}
+	.button-color#color-red {
+		background: #DEB887 url('/img/kkutu/paint_red.png') no-repeat center;
+	}
+	.button-color#color-orange {
+		background: #DEB887 url('/img/kkutu/paint_orange.png') no-repeat center;
+	}
+	.button-color#color-yellow {
+		background: #DEB887 url('/img/kkutu/paint_yellow.png') no-repeat center;
+	}
+	.button-color#color-green {
+		background: #DEB887 url('/img/kkutu/paint_green.png') no-repeat center;
+	}
+	.button-color#color-blue {
+		background: #DEB887 url('/img/kkutu/paint_blue.png') no-repeat center;
+	}
+	.button-color#color-indigo {
+		background: #DEB887 url('/img/kkutu/paint_indigo.png') no-repeat center;
+	}
+	.button-color#color-violet {
+		background: #DEB887 url('/img/kkutu/paint_violet.png') no-repeat center;
+	}
+	.button-color#color-black {
+		background: #DEB887 url('/img/kkutu/paint_black.png') no-repeat center;
+	}
+	.button-color#color-white {
+		background: #DEB887 url('/img/kkutu/paint_white.png') no-repeat center;
+	}
+
 		.hint-item{
 			padding: 5px;
 			border-radius: 5px;
@@ -428,6 +532,7 @@ iframe{
 	}
 	.jjoriping{ width: 500px; }
 	.cw.jjoriping{ margin-top: -10px; width: 322px; }
+	.dg.jjoriping{ margin-left: -25.8em }
 		.jjoObj{ position: relative; }
 		.jjoEyeL{ top: 11px; left: 0px; }
 		.jjoNose{ top: 9px; left: 181px; }
@@ -523,8 +628,14 @@ iframe{
 		text-shadow: 0px 1px 1px #141414;
 	}
 	.cw.rounds{ margin-top: -380px; }
+	.dg.rounds{
+		margin-left: -5.0em;
+		width: 100% !important;
+		margin-top: -380px;
+	}
 		.rounds label{ margin: 0px 3px; }
 		.cw.rounds label{ cursor: pointer; }
+		.dg.rounds label{ cursor: default !important; }
 		.rounds-current{ color: #FFFF3B; font-size: 16px; }
 		.round-effect{ animation: RoundEffect 0.8s ease 1; }
 	.history-holder{
@@ -543,13 +654,15 @@ iframe{
 				margin: 3px;
 				color: #EEEEEE;
 				text-align: center;
-				background-color: #232323;
+                                                background-image: url('/img/kkutu/historygif.gif');
+                                                text-shadow: 0px 0px 2px #EEEEEE;
 			}
 			.history-theme{
 				float: none !important;
 				margin: 3px;
 				font-size: 11px;
 				color: #8ACFFF;
+                                                text-shadow: 0px 0px 2px #8ACFFF;
 			}
 			.history-class{
 				padding: 1px;
@@ -558,6 +671,7 @@ iframe{
 				font-size: 11px;
 				color: #111111;
 				background-color: #77AAFF;
+                                                text-shadow: 0px 0px 2px #77AAFF;
 			}
 			.history-mean-c{ color: #AAAAAA; }
 			.history-mean{
@@ -616,12 +730,19 @@ iframe{
 			margin: 1px;
 			width: 330px;
 			height: 22px;
+                                    background-image: url('/img/kkutu/hisitem.gif');
 		}
 		.game-user-current{
 			animation: CurrentBlink 2s linear infinite;
 			margin-top: 0px;
 			height: 177px;
 			background-color: #DDFFDD;
+		}
+		.game-user-drawing{
+			animation: CurrentBlink 2s linear infinite;
+			margin-top: 0px;
+			height: 177px;
+			background-color: #9fd1f1;
 		}
 		.game-user-bomb{ border-color: #FF6666; }
 			.game-user-image{ margin: 3px 5px; width: 100px; height: 100px; }
@@ -725,11 +846,11 @@ iframe{
 		.my-stat-name{ padding-top: 3px; padding-left: 4px; width: 76px; height: 17px; font-weight: bold; }
 		.my-stat-record{ margin-top: 3px; width: 100%; }
 		.my-stat-ping{ margin-top: 3px; width: 100%; }
-		.my-okg{ border-radius: 5px; margin-top: 3px; width: 100%; height: 20px; overflow: hidden; background-color: #995511; }
+		.my-okg{ border-radius: 3px; margin-top: 3px; width: 100%; height: 20px; overflow: hidden; background-color: #995511; }
 			.my-okg .graph-bar{ background-color: #FFBB44; }
 		.my-okg-text{ margin-top: -15px; width: 100px; }
 	.my-level{ margin: 13px 0px; width: 190px; font-size: 15px; text-align: center; }
-	.my-gauge{ border-radius: 10px; margin: 3px 0px; width: 190px; height: 30px; overflow: hidden; background-color: #333333; }
+	.my-gauge{ border-radius: 3px; margin: 3px 0px; width: 190px; height: 30px; overflow: hidden; background-color: #333333; }
 		.my-gauge .graph-bar{ background-image: url('/img/kkutu/scorebar.png'); }
 	.my-gauge-text{ margin-top: -25px; width: 190px; }
 	.category-filter{
@@ -869,7 +990,7 @@ iframe{
 			margin-right: 5px;
 			width: 100px;
 			font-weight: bold;
-			text-align: center;
+			text-align: left;
 			cursor: pointer;
 		}
 			.chat-head:hover{ background-color: #FFF; }
@@ -920,4 +1041,7 @@ iframe{
 	0%		{ margin-top: -80px; font-size: 24px; opacity: 1; }
 	10%		{ margin-top: -95px; font-size: 36px; opacity: 0.95; }
 	100%	{ margin-top: -25px; font-size: 20px; opacity: 0.1; }
+}
+#canvas {
+	background-color: #fff;
 }
