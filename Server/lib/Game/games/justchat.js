@@ -24,8 +24,8 @@ var DIC;
 const ROBOT_START_DELAY = [ 1200, 800, 400, 200, 0 ];
 const ROBOT_TYPE_COEF = [ 1250, 750, 500, 250, 0 ];
 const ROBOT_THINK_COEF = [ 4, 2, 1, 0, 0 ];
-const ROBOT_HIT_LIMIT = [ 4000 ];
-const ROBOT_LENGTH_LIMIT = [ 999, 990, 99, 99, 99 ];
+const ROBOT_HIT_LIMIT = [ 3000 ];
+const ROBOT_LENGTH_LIMIT = [ 3, 4, 9, 99, 99 ];
 const RIEUL_TO_NIEUN = [4449, 4450, 4457, 4460, 4462, 4467];
 const RIEUL_TO_IEUNG = [4451, 4455, 4456, 4461, 4466, 4469];
 const NIEUN_TO_IEUNG = [4455, 4461, 4466, 4469];
@@ -290,7 +290,7 @@ exports.submit = function(client, text){
 			client.publish('turnError', { code: code || 404, value: text }, true);
 		}
 		function check_word(word){
-			return word.match(/^[ -.,`~!'"@#$%^&*_+|\/><_0-9A-Za-zぁ-ヾㄱ-ㅣ가-힣]*$/)
+			return word.match(/^[ \-\_0-9A-Za-zぁ-ヾㄱ-ㅣ가-힣]*$/)
 		}
 		if($doc){
 			var gamemode = Const.GAME_TYPE[my.mode]
@@ -303,13 +303,13 @@ exports.submit = function(client, text){
 			else if(my.opts.no2 && (text.length == 2)) denied(415);
 			else if(my.opts.jmx && (text.length > 8)) denied(416);
 			else {
-				if(my.opts.unknownword) preApproved();
+				if(my.opts.unknownword) denied(414);
 				else if (!check_word(text)) denied(413);
 				else preApproved();
 			}
 		} else {
 			if(my.opts.unknownword){
-				if(check_word(text)) preApproved();
+				if (check_word(text)) preApproved();
 				else denied(413);
 			}
 			else denied();
@@ -389,7 +389,7 @@ exports.readyRobot = function(robot){
 		if (Math.floor(Math.random()*25) != 0){
 			text = isRev ? `T.T ...${my.game.char}` : `${my.game.char}... T.T`;
 		} else {
-			text = isRev ? `TωT ...${my.game.char}` : `${my.game.char}...............`;
+			text = isRev ? `TωT ...${my.game.char}` : `${my.game.char}... TωT`;
 		}
 		after();
 	}
@@ -492,7 +492,6 @@ function getAuto(char, subc, type){
 		var lst;
 		
 		if(!my.opts.injeong) aqs.push([ 'flag', { '$nand': Const.KOR_FLAG.INJEONG } ]);
-		if(!my.game.char == "?") denied(416);
 		if(my.rule.lang == "ko"){
 			if(my.opts.loanword) aqs.push([ 'flag', { '$nand': Const.KOR_FLAG.LOANWORD } ]);
 			if(my.opts.strict) aqs.push([ 'type', Const.KOR_STRICT ], [ 'flag', { $lte: 3 } ]);
